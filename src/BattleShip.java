@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class BattleShip {
 	
-	//This is a coment
+	//This is a comment
 	
 	public static final int SHIP_SYMBOL = 'S';
 	public static final int WATER_SYMBOL = 'O';
@@ -40,9 +40,17 @@ public class BattleShip {
 		int row = letter - 'A';
 		int col = number - 1;
 		
-		//if (matrix[row][col] == ...)
+		if (matrix[row][col] == SHIP_SYMBOL) {
+			matrix [row][col] = SUNK_SHIP_SYMBOL;
+		} else {
+			if (matrix [row][col] == EMPTY_SYMBOL) {
+				matrix [row][col] = WATER_SYMBOL;
+			}
+			}
+		}
 		
-	}
+		
+
 
 	private static void addShipsToMatrix() {
 		
