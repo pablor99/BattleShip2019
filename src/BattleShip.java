@@ -44,7 +44,12 @@ public class BattleShip {
 	}
 	
 	private static void showResult() {
-		// TODO Auto-generated method stub
+		
+		if (sunkShipCounter >= NUM_SHIPS) {
+			System.out.println("YOU WIN!");
+		} else {
+			System.out.println("No remaining shots");
+		}
 		
 	}
 
